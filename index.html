@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>لأمي الحبيبة</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:"Tahoma", sans-serif;
+    }
+
+    body{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:linear-gradient(to bottom, #fff0f5, #ffe4e1);
+      overflow:hidden;
+    }
+
+    .container{
+      text-align:center;
+      animation:fadeIn 2s ease;
+    }
+
+    h1{
+      color:#c06084;
+      font-size:42px;
+      margin-bottom:15px;
+    }
+
+    .eid{
+      color:#d67ba8;
+      font-size:24px;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      padding:15px 35px;
+      border:none;
+      border-radius:40px;
+      background:#d87093;
+      color:white;
+      font-size:20px;
+      cursor:pointer;
+      transition:0.3s;
+      box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .btn:hover{
+      transform:scale(1.08);
+      background:#c75b83;
+    }
+
+    .message{
+      display:none;
+      width:85%;
+      max-width:650px;
+      background:rgba(255,255,255,0.7);
+      backdrop-filter:blur(10px);
+      border-radius:25px;
+      padding:35px;
+      text-align:center;
+      box-shadow:0 8px 25px rgba(0,0,0,0.15);
+      animation:popup 1s ease;
+    }
+
+    .message h2{
+      color:#c75b83;
+      margin-bottom:20px;
+      font-size:34px;
+    }
+
+    .message p{
+      color:#5c4a4a;
+      font-size:20px;
+      line-height:2.2;
+    }
+
+    .flowers{
+      margin-top:25px;
+      font-size:45px;
+      animation:float 3s infinite ease-in-out;
+    }
+
+    @keyframes fadeIn{
+      from{opacity:0;}
+      to{opacity:1;}
+    }
+
+    @keyframes popup{
+      from{
+        transform:scale(0.7);
+        opacity:0;
+      }
+      to{
+        transform:scale(1);
+        opacity:1;
+      }
+    }
+
+    @keyframes float{
+      0%{transform:translateY(0);}
+      50%{transform:translateY(-10px);}
+      100%{transform:translateY(0);}
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container" id="welcome">
+
+    <h1>أهلاً وسهلاً أمي الحبيبة 🌸</h1>
+
+    <div class="eid">
+      عيد مبارك يا أجمل أم 🤍
+    </div>
+
+    <button class="btn" onclick="showMessage()">
+      افتح الرسالة
+    </button>
+
+  </div>
+
+  <div class="message" id="message">
+
+    <h2>رسالة لك 🤍</h2>
+
+    <p>
+      أمي الحبيبة…<br><br>
+
+      وجودك بحياتي نعمة كبيرة،
+      وأنتِ أجمل وأحن إنسانة بالدنيا كلها 🌷<br><br>
+
+      الله يديمك لي،
+      ويجعل أيامك كلها فرح وراحة وسعادة 🤍<br><br>
+
+      وكل عام وأنتِ بخير يا قلبي،
+      وعيدك مبارك وسعيد يارب 🌸
+    </p>
+
+    <div class="flowers">
+      🌹 🌸 🌷 💐
+    </div>
+
+  </div>
+
+  <script>
+    function showMessage(){
+      document.getElementById("welcome").style.display = "none";
+      document.getElementById("message").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
